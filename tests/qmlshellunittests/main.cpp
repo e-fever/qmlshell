@@ -2,7 +2,6 @@
 #include <QtTest>
 #include <TestRunner>
 #include <QtQuickTest/quicktest.h>
-#include "tests.h"
 
 #if defined(Q_OS_MAC) || defined(Q_OS_LINUX)
 #include <execinfo.h>
@@ -35,7 +34,6 @@ int main(int argc, char *argv[])
 
     TestRunner runner;
     runner.addImportPath("qrc:///");
-    runner.add<Tests>();
     runner.add(QString(SRCDIR) + "qmltests");
 
     bool error = runner.exec(app.arguments());
