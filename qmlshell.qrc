@@ -1,3 +1,6 @@
 <RCC>
-    <qresource prefix="/"/>
+    <qresource prefix="/">
+        <file>Shell/Shell.qml</file>
+        <file>Shell/qmldir</file>
+    </qresource>
 </RCC>

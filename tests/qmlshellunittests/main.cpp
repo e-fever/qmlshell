@@ -6,6 +6,7 @@
 #if defined(Q_OS_MAC) || defined(Q_OS_LINUX)
 #include <execinfo.h>
 #include <unistd.h>
+#include <signal.h>
 void handleBacktrace(int sig) {
     void *array[100];
     size_t size;
@@ -32,9 +33,14 @@ int main(int argc, char *argv[])
 
     QGuiApplication app(argc, argv);
 
+    QVariantMap config;
+    config["srcdir"] = SRCDIR;
+
+
     TestRunner runner;
     runner.addImportPath("qrc:///");
     runner.add(QString(SRCDIR) + "qmltests");
+    runner.setConfig(config);
 
     bool error = runner.exec(app.arguments());
 

@@ -11,4 +11,13 @@ TestCase {
         var content = Shell.cat(input);
         compare(content, "dummy1.txt\ncontent\n");
     }
+
+    function test_find() {
+        var input = Qt.resolvedUrl("../testdata/").replace("file://", "");
+
+        console.log(input);
+        var files = Shell.find(input, "*.txt");
+
+        compare(files.length, 1);
+    }
 }
