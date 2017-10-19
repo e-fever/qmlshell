@@ -15,4 +15,8 @@ QtObject {
     function find(path, filters) {
         return ShellAdapter.find(arguments);
     }
+
+    function realpath_strip() {
+        return ShellAdapter.realpath_strip(arguments);
+    }
 }

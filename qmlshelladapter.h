@@ -18,6 +18,9 @@ public slots:
     QString pwd() const;
 
     QStringList find(QVariantMap arguments);
+
+    QString realpath_strip(QVariantMap arguments);
+
 };
 
 #endif // QMLSHELLADAPTER_H

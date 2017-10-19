@@ -39,6 +39,25 @@ QStringList QmlShellAdapter::find(QVariantMap arguments)
     return res;
 }
 
+QString QmlShellAdapter::realpath_strip(QVariantMap arguments)
+{
+    QString res;
+
+    int i = 0;
+
+    while (arguments.contains(QString::number(i))) {
+        QString arg = arguments[QString::number(i)].toString();
+        if (i == 0) {
+            res = QtShell::realpath_strip(arg);
+        } else {
+            res = QtShell::realpath_strip(res, arg);
+        }
+        i++;
+    }
+
+    return res;
+}
+
 static QObject *provider(QQmlEngine *engine, QJSEngine *scriptEngine)
 {
     Q_UNUSED(engine);

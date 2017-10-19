@@ -8,7 +8,7 @@ TEMPLATE = app
 
 SOURCES +=     main.cpp
 DEFINES += SRCDIR=\\\"$$PWD/\\\"
-DEFINES += QUICK_TEST_SOURCE_DIR=\\\"$$PWD/\\\"
+DEFINES += QUICK_TEST_SOURCE_DIR=\\\"$$PWD/qmltests\\\"
 
 ROOTDIR = $$PWD/../../
 
@@ -17,4 +17,5 @@ include($$ROOTDIR/qmlshell.pri)
 
 DISTFILES +=     qpm.json \    
     qmltests/tst_QmlShell.qml \
-    testdata/dummy1.txt
+    testdata/dummy1.txt \
+    ../../README.md
