@@ -58,6 +58,11 @@ QString QmlShellAdapter::realpath_strip(QVariantMap arguments)
     return res;
 }
 
+QString QmlShellAdapter::dirname(const QString &path)
+{
+    return QtShell::dirname(path);
+}
+
 static QObject *provider(QQmlEngine *engine, QJSEngine *scriptEngine)
 {
     Q_UNUSED(engine);

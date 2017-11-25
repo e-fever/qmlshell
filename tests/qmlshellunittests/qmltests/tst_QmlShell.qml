@@ -27,4 +27,8 @@ TestCase {
         compare(Shell.realpath_strip("tmp","/subdir1/","subdir2"),  Shell.pwd() + "/tmp/subdir1/subdir2");
 
     }
+
+    function test_dirname() {
+        compare(Shell.dirname("/tmp"),  "/");
+    }
 }

@@ -19,4 +19,8 @@ QtObject {
     function realpath_strip() {
         return ShellAdapter.realpath_strip(arguments);
     }
+
+    function dirname(path) {
+        return ShellAdapter.dirname(path);
+    }
 }
