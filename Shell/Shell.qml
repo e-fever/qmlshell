@@ -23,4 +23,8 @@ QtObject {
     function dirname(path) {
         return ShellAdapter.dirname(path);
     }
+
+    function basename(path) {
+        return ShellAdapter.basename(path);
+    }
 }

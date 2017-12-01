@@ -22,6 +22,9 @@ public slots:
     QString realpath_strip(QVariantMap arguments);
 
     QString dirname(const QString& path);
+
+    QString basename(const QString& path);
+
 };
 
 #endif // QMLSHELLADAPTER_H

@@ -63,6 +63,11 @@ QString QmlShellAdapter::dirname(const QString &path)
     return QtShell::dirname(path);
 }
 
+QString QmlShellAdapter::basename(const QString &path)
+{
+    return QtShell::basename(path);
+}
+
 static QObject *provider(QQmlEngine *engine, QJSEngine *scriptEngine)
 {
     Q_UNUSED(engine);

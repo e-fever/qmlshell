@@ -31,4 +31,9 @@ TestCase {
     function test_dirname() {
         compare(Shell.dirname("/tmp"),  "/");
     }
+
+    function test_basename() {
+        compare(Shell.basename("/tmp/123.txt"),  "123.txt");
+    }
+
 }
