@@ -78,7 +78,7 @@ static QObject *provider(QQmlEngine *engine, QJSEngine *scriptEngine)
     return object;
 }
 
-void init()
+static void init()
 {
     qmlRegisterSingletonType<QmlShellAdapter>("Shell.Private", 1, 0, "ShellAdapter", provider);
 }
