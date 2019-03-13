@@ -18,4 +18,5 @@ include($$ROOTDIR/qmlshell.pri)
 DISTFILES +=     qpm.json \    
     qmltests/tst_QmlShell.qml \
     testdata/dummy1.txt \
-    ../../README.md
+    ../../README.md \
+    ../../qpm.json
