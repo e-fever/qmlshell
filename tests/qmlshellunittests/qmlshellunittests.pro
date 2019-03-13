@@ -19,4 +19,5 @@ DISTFILES +=     qpm.json \
     qmltests/tst_QmlShell.qml \
     testdata/dummy1.txt \
     ../../README.md \
-    ../../qpm.json
+    ../../qpm.json \
+    ../../appveyor.yml
